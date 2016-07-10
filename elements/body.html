@@ -3,6 +3,7 @@
     <link rel="import" href="/bower_components/polymer/polymer.html">
     <link rel="import" href="/bower_components/paper-material/paper-material.html">
     <link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout.html">
+    <link rel="import" href="home.html">
   </head>
   <dom-module id="page-body">
     <style is="custom-style">
@@ -10,12 +11,13 @@
         @apply(--layout-horizontal);
         @apply(--layout-center-justified);
         @apply(--layout-center);
+        padding: 30px 0 0 0;
       }
     </style>
     <template>
       <div id="body-content">
         <paper-material elevation="0">
-          <div>Hello World!</div>
+          <home-page></home-page>
         </paper-material>
       </div>
     </template>
