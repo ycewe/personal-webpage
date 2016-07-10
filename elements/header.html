@@ -11,6 +11,7 @@
       <style is="custom-style">
         paper-header-panel {
           height: inherit;
+          margin: 0 0 10px 0;
         }
         paper-toolbar {
           background-color: rgb(255, 255, 255);
@@ -23,6 +24,17 @@
         iron-icon {
           padding: 2px;
         }
+        paper-tabs {
+          --paper-tabs-selection-bar-color: black;
+          height: 100%;
+        }
+        paper-tab {
+          color: #212121;
+          --paper-tab-ink: black;
+        }
+        paper-tab.iron-selected {
+          color: black;
+        }
       </style>
       <paper-header-panel mode="seamed">
         <paper-toolbar>
@@ -30,8 +42,12 @@
               <paper-tab>
                 <iron-icon icon="home"></iron-icon>Home
               </paper-tab>
-              <paper-tab>Portfolio</paper-tab>
-              <paper-tab>Resume</paper-tab>
+              <paper-tab>
+                <iron-icon icon="stars"></iron-icon>Resume
+              </paper-tab>
+              <paper-tab>
+                <iron-icon icon="work"></iron-icon>Portfolio
+              </paper-tab>
             </paper-tabs>
         </paper-toolbar>
       </paper-header-panel>
