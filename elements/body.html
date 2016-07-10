@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <link rel="import" href="/bower_components/polymer/polymer.html">
+    <link rel="import" href="/bower_components/paper-material/paper-material.html">
+    <link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout.html">
+  </head>
+  <dom-module id="page-body">
+    <style is="custom-style">
+      #body-content {
+        @apply(--layout-horizontal);
+        @apply(--layout-center-justified);
+        @apply(--layout-center);
+      }
+    </style>
+    <template>
+      <div id="body-content">
+        <paper-material elevation="0">
+          <div>Hello World!</div>
+        </paper-material>
+      </div>
+    </template>
+    <script>
+      Polymer({
+        is: "page-body",
+      })
+    </script>
+  </dom-module>
+</html>
