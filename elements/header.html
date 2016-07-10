@@ -11,7 +11,6 @@
       <style is="custom-style">
         paper-header-panel {
           height: inherit;
-          margin: 0 0 10px 0;
         }
         paper-toolbar {
           background-color: rgb(255, 255, 255);
@@ -31,6 +30,9 @@
         paper-tab {
           color: #212121;
           --paper-tab-ink: black;
+        }
+        paper-tab:hover, paper-tab.iron-selected:hover {
+          color: red;
         }
         paper-tab.iron-selected {
           color: black;
