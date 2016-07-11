@@ -28,6 +28,7 @@
     "platinum-sw": "^1.3.0",
     "iron-icon": "^1.0.8",
     "iron-icons": "^1.1.3",
-    "iron-image": "^1.2.3"
+    "iron-image": "^1.2.3",
+    "app-router": "^2.6.1"
   }
 }
