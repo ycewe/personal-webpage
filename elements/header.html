@@ -1,10 +1,12 @@
 <html>
   <head>
     <link rel="import" href="/bower_components/polymer/polymer.html">
+    <link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout.html">
     <link rel="import" href="/bower_components/paper-header-panel/paper-header-panel.html">
     <link rel="import" href="/bower_components/paper-toolbar/paper-toolbar.html">
     <link rel="import" href="/bower_components/paper-tabs/paper-tabs.html">
     <link rel="import" href="/bower_components/iron-icons/iron-icons.html">
+    <link rel="import" href="/bower_components/app-router/app-router.html">
   </head>
   <dom-module id="page-header">
     <template>
@@ -31,24 +33,31 @@
           color: #212121;
           --paper-tab-ink: black;
         }
-        paper-tab:hover, paper-tab.iron-selected:hover {
-          color: red;
-        }
         paper-tab.iron-selected {
           color: black;
+        }
+        .link {
+          @apply(--layout-horizontal);
+          @apply(--layout-center-center);
+          padding: 0 20px;
+          text-decoration: none;
+          color: black;
+        }
+        .link:hover {
+          color: red;
         }
       </style>
       <paper-header-panel mode="seamed">
         <paper-toolbar>
-            <paper-tabs selected="0">
-              <paper-tab>
-                <iron-icon icon="home"></iron-icon>Home
+            <paper-tabs selected="{{selected}}" valueattr="path">
+              <paper-tab link path="/">
+                <a href="#/" class="link"><iron-icon icon="home"></iron-icon>Home</a>
               </paper-tab>
-              <paper-tab>
-                <iron-icon icon="stars"></iron-icon>Resume
+              <paper-tab link path="/resume">
+                <a href="#/resume" class="link"><iron-icon icon="stars"></iron-icon>Resume</a>
               </paper-tab>
-              <paper-tab>
-                <iron-icon icon="work"></iron-icon>Portfolio
+              <paper-tab link path="/portfolio">
+                <a href="#/portfolio" class="link"><iron-icon icon="work"></iron-icon>Portfolio</a>
               </paper-tab>
             </paper-tabs>
         </paper-toolbar>

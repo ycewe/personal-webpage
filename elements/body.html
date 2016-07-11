@@ -3,21 +3,26 @@
     <link rel="import" href="/bower_components/polymer/polymer.html">
     <link rel="import" href="/bower_components/paper-material/paper-material.html">
     <link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout.html">
-    <link rel="import" href="home.html">
+    <link rel="import" href="/bower_components/app-router/app-router.html">
   </head>
   <dom-module id="page-body">
-    <style is="custom-style">
-      #body-content {
-        @apply(--layout-horizontal);
-        @apply(--layout-center-justified);
-        @apply(--layout-center);
-        padding: 30px 0 0 0;
-      }
-    </style>
     <template>
+      <style is="custom-style">
+        #body-content {
+          @apply(--layout-horizontal);
+          @apply(--layout-center-justified);
+          @apply(--layout-center);
+          padding: 30px 0 0 0;
+        }
+      </style>
+      <app-route route="{{route}}" pattern="/tabName" data="{{data}}"></app-route>
       <div id="body-content">
         <paper-material elevation="0">
-          <home-page></home-page>
+          <app-router mode="hash">
+            <app-route path="/" import="/elements/home.html" element="home-page"></app-route>
+            <app-route path="/resume" import="/elements/resume.html" element="resume-page"></app-route>
+            <app-route path="/portfolio" import="/elements/portfolio.html" element="portfolio-page"></app-route>
+          </app-router>
         </paper-material>
       </div>
     </template>
