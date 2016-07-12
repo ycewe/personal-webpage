@@ -6,7 +6,8 @@
     <link rel="import" href="/bower_components/paper-toolbar/paper-toolbar.html">
     <link rel="import" href="/bower_components/paper-tabs/paper-tabs.html">
     <link rel="import" href="/bower_components/iron-icons/iron-icons.html">
-    <link rel="import" href="/bower_components/app-router/app-router.html">
+    <link rel="import" href="/bower_components/iron-location/iron-location.html">
+    <link rel="stylesheet" type="text/css" href="/resources/css/header.css">
   </head>
   <dom-module id="page-header">
     <template>
@@ -15,8 +16,7 @@
           height: inherit;
         }
         paper-toolbar {
-          background-color: rgb(255, 255, 255);
-          color: rgb(0, 0, 0);
+          background-color: rgb(0, 0, 0);
           padding: 0;
           margin: 0;
           display: flex;
@@ -26,37 +26,37 @@
           padding: 2px;
         }
         paper-tabs {
-          --paper-tabs-selection-bar-color: rgb(125, 125, 125);
           height: 100%;
           margin: 0;
           padding: 0;
           width: 100%;
+          --paper-tabs-selection-bar-color: cyan;
           --paper-tabs-selection-bar: {
-            bottom: 8px;
+            height: 4px;
           }
         }
         paper-tab {
-          color: #212121;
-          --paper-tab-ink: black;
+          color: cyan;
         }
-        paper-tab.iron-selected {
-          color: black;
+        paper-tab:focus {
+          color: cyan;
         }
         .link {
           @apply(--layout-horizontal);
           @apply(--layout-center-center);
           padding: 0 20px;
           text-decoration: none;
-          color: black;
+          color: rgb(255, 255, 255);
         }
         .link:hover {
-          color: rgb(125, 125, 125);
+          color: cyan;
         }
       </style>
-      <paper-header-panel id="header" mode="seamed">
+      <iron-location path="{{path}}" hash="{{hash}}" query="{{query}}"></iron-location>
+      <paper-header-panel mode="seamed" class="slide-down-fade-in">
         <paper-toolbar>
-            <paper-tabs>
-              <paper-tab link active path="/">
+            <paper-tabs noink selected="{{getSelected(hash)}}">
+              <paper-tab link path="/">
                 <a href="#/" class="link"><iron-icon icon="home"></iron-icon>Home</a>
               </paper-tab>
               <paper-tab link path="/resume">
@@ -72,6 +72,15 @@
     <script>
       Polymer({
         is: "page-header",
+        getSelected: function(hash) {
+          if(hash === '/resume') {
+            return 1;
+          } else if (hash === '/portfolio') {
+            return 2;
+          } else {
+            return 0;
+          }
+        },
       })
     </script>
   </dom-module>
