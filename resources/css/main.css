@@ -2,9 +2,6 @@ body {
   padding: 0;
   margin: 0;
   height: 100vh;
-}
-
-#page-body {
-  display: flex;
-  align-content: center;
+  overflow: hidden;
+  word-wrap: break-word;
 }
