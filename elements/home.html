@@ -3,6 +3,8 @@
     <link rel="import" href="/bower_components/polymer/polymer.html">
     <link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout.html">
     <link rel="import" href="/bower_components/iron-image/iron-image.html">
+    <link rel="import" href="/bower_components/paper-material/paper-material.html">
+    <link rel="stylesheet" type="text/css" href="/resources/css/home.css">
   </head>
   <dom-module id="home-page">
     <template>
@@ -11,7 +13,16 @@
           border-radius: 50%;
         }
       </style>
-      <!-- <iron-image src="/resources/images/home_01.jpg" preload></iron-image> -->
+      <div id="home-image">
+        <iron-image src="http://lorempixel.com/200/200" preload></iron-image>
+      </div>
+      <div id="home-container">
+        <div id="home-content">
+          <div id="home-content-text" class="slide-up-fade-in">
+            Hello
+          </div>
+        </div>
+      </div>
     </template>
     <script>
       Polymer({

@@ -1,0 +1,40 @@
+#home-image {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+}
+
+#home-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+#home-content {
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.slide-up-fade-in {
+	animation-name: slideUpFadeIn;
+	-webkit-animation-name: slideUpFadeIn;
+	animation-duration: 0.7s;
+	-webkit-animation-duration: 0.7s;
+	animation-timing-function: ease-in-out;
+	-webkit-animation-timing-function: ease-in-out;
+}
+
+@keyframes slideUpFadeIn {
+	0% { transform: translateY(20%); opacity: 0; }
+	100% { transform: translateY(0%); opacity: 1; }
+}
+
+@-webkit-keyframes slideUpFadeIn {
+	0% { -webkit-transform: translateY(20%); opacity: 0; }
+	100% { -webkit-transform: translateY(0%); opacity: 1; }
+}
