@@ -12,12 +12,24 @@
           @apply(--layout-horizontal);
           @apply(--layout-center-justified);
           @apply(--layout-center);
-          padding: 30px 0 0 0;
+          padding: 20px 0 0 0;
+          background-color: rgb(0, 0, 0);
+          height: 100%;
+        }
+        paper-material {
+          width: 100%;
+          height: 100%;
+          background-color: rgb(255, 255, 255);
+          display: flex;
+          justify-content: center;
+        }
+        app-router, app-route {
+          width: 100%;
+          height: 100%;
         }
       </style>
-      <app-route route="{{route}}" pattern="/tabName" data="{{data}}"></app-route>
       <div id="body-content">
-        <paper-material elevation="0">
+        <paper-material elevation="2">
           <app-router mode="hash">
             <app-route path="/" import="/elements/home.html" element="home-page"></app-route>
             <app-route path="/resume" import="/elements/resume.html" element="resume-page"></app-route>

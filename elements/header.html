@@ -26,8 +26,14 @@
           padding: 2px;
         }
         paper-tabs {
-          --paper-tabs-selection-bar-color: black;
+          --paper-tabs-selection-bar-color: rgb(125, 125, 125);
           height: 100%;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          --paper-tabs-selection-bar: {
+            bottom: 8px;
+          }
         }
         paper-tab {
           color: #212121;
@@ -44,13 +50,13 @@
           color: black;
         }
         .link:hover {
-          color: red;
+          color: rgb(125, 125, 125);
         }
       </style>
-      <paper-header-panel mode="seamed">
+      <paper-header-panel id="header" mode="seamed">
         <paper-toolbar>
-            <paper-tabs selected="{{selected}}" valueattr="path">
-              <paper-tab link path="/">
+            <paper-tabs>
+              <paper-tab link active path="/">
                 <a href="#/" class="link"><iron-icon icon="home"></iron-icon>Home</a>
               </paper-tab>
               <paper-tab link path="/resume">
