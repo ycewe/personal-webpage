@@ -1,0 +1,79 @@
+{
+  "experience": [
+    {
+      "position": "Software Engineering Intern",
+      "name": "ZALORA Singapore",
+      "year": "May 2016 - Present",
+      "details": "Full stack engineer tasked to develop a web application for mobile API abstraction. Currently the sole-developer on the project. Also, assisted with front-end development of their global fashion group website."
+    }
+  ],
+  "education": [
+    {
+      "name": "National University of Singapore",
+      "year": "2013 - Present",
+      "studies": "B.Hons Computer Science with a minor in Economics",
+      "results": "CAP: 3.64",
+      "others": "Specializing in Interactive Media and Artificial Intelligence"
+    },
+    {
+      "name": "University of Birmingham",
+      "year": "Oct 2015 - Dec 2015",
+      "studies": "Read Computational Vision, Machine Learning, Operating Systems, Chemistry for Engineering and Game Theory"
+    },
+    {
+      "name": "Sunway College, Subang Jaya",
+      "year": "2011 - 2012",
+      "studies": "Took Cambridge GCE A-Levels for Chemistry, Physics, Economics and Math",
+      "results": "Grades: 5A*"
+    }
+  ],
+  "cca": [
+    {
+      "position": "Dancer and Choreographer",
+      "name": "Danshers, NUS Sheares Hall Dance",
+      "year": "2013 - Present",
+      "desc": ""
+    },
+    {
+      "position": "Director of Resource",
+      "name": "Directorate, NUS Cultural Activities Club",
+      "year": "2014",
+      "desc": ""
+    },
+    {
+      "position": "Vice Chairperson",
+      "name": "Camp Estrella, NUS Cultural Activities Club",
+      "year": "2014",
+      "desc": ""
+    },
+    {
+      "position": "Director of Programmes",
+      "name": "CAC+US Concert, NUS Cultural Activities Club",
+      "year": "2014",
+      "desc": ""
+    },
+    {
+      "position": "Director of Internal Relations",
+      "name": "Cultural Week, NUS Cultural Activities Club",
+      "year": "2014",
+      "desc": ""
+    },
+    {
+      "position": "Director of Special Projects",
+      "name": "Sheares Welcome and Orientation Committee",
+      "year": "2014",
+      "desc": "Organized a 10 day camp for incoming freshman into Sheares Hall, NUS. Assisted with drafting and execution of programmes for the camp. Coordinated and executed two main projects, flash mob and finale night, for the camp."
+    }
+  ],
+  "awards": [
+    {
+      "name": "ASEAN Undergraduate Scholarship",
+      "year": "2013"
+    },
+    {
+      "name": "Sunway A-Levels",
+      "year": "2011",
+      "desc": "Best student award for Economics"
+    }
+  ]
+}

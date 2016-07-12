@@ -2,7 +2,7 @@ body {
   padding: 0;
   margin: 0;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
   word-wrap: break-word;
   background-color: rgb(0, 0, 0);
 }

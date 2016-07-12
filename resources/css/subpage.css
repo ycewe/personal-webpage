@@ -13,6 +13,10 @@
   src: url(/resources/fonts/Delicious-SmallCaps.otf);
 }
 
+div {
+  margin: 0 0 8px 0;
+}
+
 .content {
   padding: 30px;
   background-color: rgb(255, 255, 255);
@@ -27,14 +31,25 @@
 }
 
 .sub-title {
-  margin: 20px 0 0 0;
+  margin: 20px 0 10px 0;
   font-family: delicious-smallcaps;
-  font-size: 30px;
+  font-size: 32px;
+  color: green;
 }
 
 .sub-content {
   font-family: delicious-roman;
-  font-size: 21px;
+  font-size: 18px;
+  margin-right: 30px;
+}
+
+.primary {
+  font-family: delicious-bold;
+  font-size: 25px;
+}
+
+.year {
+  color: rgb(125, 125, 125);
 }
 
 .slide-up-fade-in {

@@ -2,16 +2,56 @@
   <head>
     <link rel="import" href="/bower_components/polymer/polymer.html">
     <link rel="import" href="/bower_components/iron-flex-layout/iron-flex-layout.html">
+    <link rel="import" href="/bower_components/iron-ajax/iron-ajax.html">
     <link rel="stylesheet" type="text/css" href="/resources/css/subpage.css">
   </head>
   <dom-module id="resume-page">
     <template>
+      <iron-ajax auto url="/contents/resume.json" handle-as="json" last-response="{{data}}"></iron-ajax>
       <div class="content">
         <div class="content-text slide-up-fade-in">
           <div class="title">Something</div>
           <hr>
-          <div class="sub-title">Somewhere</div>
-          <div class="sub-content"></div>
+          <div class="sub-title">Professional Experience</div>
+          <div class="sub-content">
+            <template is="dom-repeat" items="{{data.experience}}" as="experience">
+              <div class="primary"><span>[[experience.position]]</span></div>
+              <div class="year"><span>[[experience.year]]</span></div>
+              <div><span>[[experience.name]]</span></div>
+              <div><span>[[experience.details]]</span></div>
+              <br>
+            </template>
+          </div>
+          <div class="sub-title">Education</div>
+          <div class="sub-content">
+            <template is="dom-repeat" items="{{data.education}}" as="education">
+              <div class="primary"><span>[[education.name]]</span></div>
+              <div class="year"><span>[[education.year]]</span></div>
+              <div><span>[[education.studies]]</span></div>
+              <div><span>[[education.results]]</span></div>
+              <div><span>[[education.others]]</span></div>
+              <br>
+            </template>
+          </div>
+          <div class="sub-title">Leadership</div>
+          <div class="sub-content">
+            <template is="dom-repeat" items="{{data.cca}}" as="cca">
+              <div class="primary"><span>[[cca.position]]</span></div>
+              <div class="year"><span>[[cca.year]]</span></div>
+              <div><span>[[cca.name]]</span></div>
+              <div><span>[[cca.desc]]</span></div>
+              <br>
+            </template>
+          </div>
+          <div class="sub-title">Awards</div>
+          <div class="sub-content">
+            <template is="dom-repeat" items="{{data.awards}}" as="award">
+              <div class="primary"><span>[[award.name]]</span></div>
+              <div class="year"><span>[[award.year]]</span></div>
+              <div><span>[[award.desc]]</span></div>
+              <br>
+            </template>
+          </div>
         </div>
       </div>
     </template>
