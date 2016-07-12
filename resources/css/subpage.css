@@ -1,5 +1,8 @@
 .content {
   padding: 20px;
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  width: 100%;
 }
 
 .title {
@@ -14,21 +17,21 @@
   font-size: 24px;
 }
 
-.slide-left-fade-in {
-	animation-name: slideLeftFadeIn;
-	-webkit-animation-name: slideLeftFadeIn;
-	animation-duration: 0.5s;
-	-webkit-animation-duration: 0.5s;
+.slide-up-fade-in {
+	animation-name: slideUpFadeIn;
+	-webkit-animation-name: slideUpFadeIn;
+	animation-duration: 0.7s;
+	-webkit-animation-duration: 0.7s;
 	animation-timing-function: ease-in-out;
 	-webkit-animation-timing-function: ease-in-out;
 }
 
-@keyframes slideLeftFadeIn {
+@keyframes slideUpFadeIn {
 	0% { transform: translateY(20%); opacity: 0; }
 	100% { transform: translateY(0%); opacity: 1; }
 }
 
-@-webkit-keyframes slideLeftFadeIn {
+@-webkit-keyframes slideUpFadeIn {
 	0% { -webkit-transform: translateY(20%); opacity: 0; }
 	100% { -webkit-transform: translateY(0%); opacity: 1; }
 }
