@@ -1,0 +1,18 @@
+.slide-down-fade-in {
+	animation-name: slideDownFadeIn;
+	-webkit-animation-name: slideDownFadeIn;
+	animation-duration: 0.5s;
+	-webkit-animation-duration: 0.5s;
+	animation-timing-function: ease;
+	-webkit-animation-timing-function: ease;
+}
+
+@keyframes slideDownFadeIn {
+	0% { transform: translateY(-30%); opacity: 0; }
+	100% { transform: translateY(0%); opacity: 1; }
+}
+
+@-webkit-keyframes slideDownFadeIn {
+	0% { -webkit-transform: translateY(-30%); opacity: 0; }
+	100% { -webkit-transform: translateY(0%); opacity: 1; }
+}
