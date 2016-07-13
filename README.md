@@ -1,8 +1,9 @@
 ycewe.github.io
 ===============
-This is my first try at github!
+This was initially a project to try out Polymer elements. Eventually I transformed it into
+my personal webpage.
 
-My Github user page is at: 
+My Github user page is at:
 https://github.com/ycewe/
 
 My Github Pages repo can be found at:  
