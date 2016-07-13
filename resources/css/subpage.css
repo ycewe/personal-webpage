@@ -1,20 +1,20 @@
 @font-face {
-  font-family: delicious-bold;
-  src: url(/resources/fonts/Delicious-Bold.otf);
+  font-family: delicious-heavy;
+  src: url(/resources/fonts/Delicious-Heavy.otf);
 }
 
 @font-face {
-  font-family: delicious-roman;
-  src: url(/resources/fonts/Delicious-Roman.otf);
+  font-family: reef;
+  src: url(/resources/fonts/Reef.otf);
 }
 
 @font-face {
-  font-family: delicious-smallcaps;
-  src: url(/resources/fonts/Delicious-SmallCaps.otf);
+  font-family: alcubierre;
+  src: url(/resources/fonts/Alcubierre.otf);
 }
 
-div {
-  margin: 0 0 8px 0;
+.content div {
+  margin-bottom: 5px;
 }
 
 .content {
@@ -26,26 +26,26 @@ div {
 
 .title {
   margin: 0 0 30px 0;
-  font-family: delicious-bold;
+  font-family: delicious-heavy;
   font-size: 48px;
 }
 
 .sub-title {
   margin: 20px 0 10px 0;
-  font-family: delicious-smallcaps;
-  font-size: 32px;
+  font-family: reef;
+  font-size: 30px;
   color: green;
 }
 
 .sub-content {
-  font-family: delicious-roman;
-  font-size: 18px;
+  font-family: alcubierre;
+  font-size: 21px;
   margin-right: 30px;
 }
 
-.primary {
-  font-family: delicious-bold;
-  font-size: 25px;
+.priority {
+  font-family: reef;
+  font-size: 21px;
 }
 
 .year {
@@ -62,11 +62,11 @@ div {
 }
 
 @keyframes slideUpFadeIn {
-	0% { transform: translateY(20%); opacity: 0; }
+	0% { transform: translateY(1%); opacity: 0; }
 	100% { transform: translateY(0%); opacity: 1; }
 }
 
 @-webkit-keyframes slideUpFadeIn {
-	0% { -webkit-transform: translateY(20%); opacity: 0; }
+	0% { -webkit-transform: translateY(1%); opacity: 0; }
 	100% { -webkit-transform: translateY(0%); opacity: 1; }
 }

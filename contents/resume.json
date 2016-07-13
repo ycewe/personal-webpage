@@ -29,51 +29,79 @@
   ],
   "cca": [
     {
-      "position": "Dancer and Choreographer",
-      "name": "Danshers, NUS Sheares Hall Dance",
+      "position": "Performer and Choreographer",
+      "name": "NUS Sheares Hall Dance (DanShers)",
       "year": "2013 - Present",
-      "desc": ""
+      "desc": "Danshers is a group of dancers from Sheares Hall, heavily involved in three concerts throughout the year mainly, Good Luck Concert (GLC), SHout! and Dance Uncensored. I was the choreographer for Good Luck Concert 2014 and performed for all other events throughout my stay in Sheares Hall."
     },
     {
       "position": "Director of Resource",
       "name": "Directorate, NUS Cultural Activities Club",
-      "year": "2014",
-      "desc": ""
+      "year": "2014 - 2015",
+      "desc": "NUS Cultural Activities Club (CAC) consists of 11 sub-club excluding the main directorate. Thus, I was in-charged of club's logistics and collation of resources especially venues and manpower for performance and rehearsals."
     },
     {
       "position": "Vice Chairperson",
       "name": "Camp Estrella, NUS Cultural Activities Club",
       "year": "2014",
-      "desc": ""
+      "desc": "Camp Estrella is a social camp to unite and orientate freshman on the cultural lifestyle in NUS. I was in-charged of the camp's internal affairs which are the program flow, logistics, resources as well as food and welfare of the participants."
     },
     {
       "position": "Director of Programmes",
       "name": "CAC+US Concert, NUS Cultural Activities Club",
       "year": "2014",
-      "desc": ""
+      "desc": "CAC+US is one of the largest concert in NUS incorporating performances from all of NUS CAC cultural sub-clubs. I organized and planned the program flow for the concert. I was also the liaison between the main committee and the sub-clubs."
     },
     {
       "position": "Director of Internal Relations",
       "name": "Cultural Week, NUS Cultural Activities Club",
       "year": "2014",
-      "desc": ""
+      "desc": "Cultural Week aims to promote awareness of NUS cultural clubs to the students mid-academic year. I was in-charged of internal publicity as well as liaison between the committee and the sub-clubs."
     },
     {
       "position": "Director of Special Projects",
-      "name": "Sheares Welcome and Orientation Committee",
+      "name": "Sheares Welcome and Orientation Committee (SWOC)",
       "year": "2014",
-      "desc": "Organized a 10 day camp for incoming freshman into Sheares Hall, NUS. Assisted with drafting and execution of programmes for the camp. Coordinated and executed two main projects, flash mob and finale night, for the camp."
-    }
-  ],
-  "awards": [
-    {
-      "name": "ASEAN Undergraduate Scholarship",
-      "year": "2013"
+      "desc": "Organized a 10 day camp for incoming freshman into Sheares Hall, NUS in which I coordinated and executed two main projects, flash mob and finale night, for the camp. I also assisted with drafting and execution of programmes for the camp."
     },
     {
-      "name": "Sunway A-Levels",
+      "position": "Secretary",
+      "name": "A-Levels Student Council",
+      "year": "2011 - 2012",
+      "desc": "In-charged of archiving, records and drafting of letters and proposals of the Student Council. Also, Co-organized several events for my peers and A-Levels cohort."
+    },
+    {
+      "position": "Dance Co-Leader and Choreographer",
+      "name": "Love Is A Many Splendoured Thing! The Musical (LIAMST!)",
+      "year": "2011 - 2012",
+      "desc": "LIAMST! is an external charitable project in a form of a concert organized by Mr Kingsley Row. I was charged to lead a group of student dancers and choregraphed dance-pieces from a bygone era including the Rock & Roll and Charleston."
+    }
+  ],
+  "achievements": [
+    {
+      "year": "2013",
+      "info": [
+        {
+          "name": "ASEAN Undergraduate Scholarship"
+        }
+      ]
+    },
+    {
+      "year": "2012",
+      "info": [
+        {
+          "name": "Sunway College,",
+          "desc": "Top Student in A1 Levels Economics"
+        }
+      ]
+    },
+    {
       "year": "2011",
-      "desc": "Best student award for Economics"
+      "info": [
+        {
+          "name": "Tan Sri Dato’ Seri Dr Jeffrey Cheah Scholarship"
+        }
+      ]
     }
   ]
 }
