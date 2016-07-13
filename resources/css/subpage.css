@@ -72,8 +72,8 @@ a {
 .slide-up-fade-in {
 	animation-name: slideUpFadeIn;
 	-webkit-animation-name: slideUpFadeIn;
-	animation-duration: 0.7s;
-	-webkit-animation-duration: 0.7s;
+	animation-duration: 0.4s;
+	-webkit-animation-duration: 0.4s;
 	animation-timing-function: ease-in-out;
 	-webkit-animation-timing-function: ease-in-out;
 }
