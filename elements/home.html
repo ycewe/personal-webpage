@@ -14,14 +14,21 @@
         }
       </style>
       <div id="home-image">
-        <iron-image src="" preload></iron-image>
+        <iron-image src="/resources/images/home_01.jpg" preload></iron-image>
       </div>
       <div id="home-container">
-        <div id="home-content">
-          <div id="home-content-text" class="slide-up-fade-in">
-            Hello
+        <paper-material id="home-content" elevation="3" class="expand-in">
+          <div id="user-info">
+            <span id="info-name">Eric Ewe</span>
+            <span>&nbsp;|&nbsp;Code, Dance, Live</span>
           </div>
-        </div>
+          <br>
+          <div id="home-content-text">
+            A passionate full stack web developer and part-time dancer.
+            Aspires to one day work-on-the-go, travelling the world, thus fulfilling all three of
+            the aforementioned above.
+          </div>
+        </paper-material>
       </div>
     </template>
     <script>

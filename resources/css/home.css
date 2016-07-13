@@ -1,3 +1,13 @@
+@font-face {
+  font-family: reef;
+  src: url(/resources/fonts/Reef.otf);
+}
+
+@font-face {
+  font-family: alcubierre;
+  src: url(/resources/fonts/Alcubierre.otf);
+}
+
 #home-image {
   display: flex;
   justify-content: center;
@@ -14,27 +24,46 @@
 
 #home-content {
   background: rgb(255, 255, 255);
-  padding: 20px;
+  padding: 30px;
   height: 100%;
-  width: 100%;
+  width: 80%;
   text-align: center;
+  font-family: alcubierre;
+  font-size: 21px;
 }
 
-.slide-up-fade-in {
-	animation-name: slideUpFadeIn;
-	-webkit-animation-name: slideUpFadeIn;
-	animation-duration: 0.7s;
-	-webkit-animation-duration: 0.7s;
-	animation-timing-function: ease-in-out;
-	-webkit-animation-timing-function: ease-in-out;
+#user-info {
+  font-family: reef;
+  font-size: 18px;
 }
 
-@keyframes slideUpFadeIn {
-	0% { transform: translateY(20%); opacity: 0; }
-	100% { transform: translateY(0%); opacity: 1; }
+#info-name {
+  color: coral;
 }
 
-@-webkit-keyframes slideUpFadeIn {
-	0% { -webkit-transform: translateY(20%); opacity: 0; }
-	100% { -webkit-transform: translateY(0%); opacity: 1; }
+.wip {
+  color: red;
+}
+
+.expand-in {
+	animation-name: expandIn;
+	-webkit-animation-name: expandIn;
+	animation-duration: 0.8s;
+	-webkit-animation-duration: 0.8s;
+	animation-timing-function: ease-out;
+	-webkit-animation-timing-function: ease-out;
+}
+
+@keyframes expandIn {
+	0% { transform: scale(0.3) rotate(6deg) translateX(-30%) translateY(30%); opacity: 0.2; }
+	35% { transform: scale(1.03) rotate(-2deg) translateX(2%) translateY(-2%); opacity: 1; }
+	70% { transform: scale(0.98) rotate(1deg) translateX(0%) translateY(0%); opacity: 1; }
+	100% { transform: scale(1) rotate(0deg) translateX(0%) translateY(0%); opacity: 1; }
+}
+
+@-webkit-keyframes expandIn {
+	0% { -webkit-transform: scale(0.3) rotate(6deg) translateX(-30%) translateY(30%); opacity: 0.2; }
+	35% { -webkit-transform: scale(1.03) rotate(-2deg) translateX(2%) translateY(-2%); opacity: 1; }
+	70% { -webkit-transform: scale(0.98) rotate(1deg) translateX(0%) translateY(0%); opacity: 1; }
+	100% { -webkit-transform: scale(1) rotate(0deg) translateX(0%) translateY(0%); opacity: 1; }
 }
