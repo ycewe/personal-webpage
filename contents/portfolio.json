@@ -2,6 +2,15 @@
   "website": "https://github.com/ycewe/",
   "projects": [
     {
+      "name": "Global Fashion Group (GFG)",
+      "link": "http://global-fashion-group.com/",
+      "short": "GFG",
+      "techstack": [
+        "HTML5", "CSS3", "Bootstrap3"
+      ],
+      "details": " is a webpage dedicated to the Global Fashion Group which operates many renown brands in fashion."
+    },
+    {
       "name": "CP Book Companion Website",
       "link": "http://cpbook.net/",
       "short": "CPBook",
