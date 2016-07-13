@@ -6,12 +6,28 @@
   </head>
   <dom-module id="portfolio-page">
     <template>
+      <iron-ajax auto url="/contents/portfolio.json" handle-as="json" last-response="{{data}}"></iron-ajax>
       <div class="content">
         <div class="content-text slide-up-fade-in">
-          <div class="title">Anything</div>
+          <div class="title">Portfolio</div>
           <hr>
-          <div class="sub-title">Anywhere</div>
-          <div class="sub-content"></div>
+          <br>
+          <div class="sub-content">These are the software and web projects that I have been working on.
+            Their repositories can be found on
+            <a href="[[data.website]]">[[data.website]]</a>
+          </div>
+          <br>
+          <template is="dom-repeat" items="{{data.projects}}" as="project">
+            <div class="sub-title">[[project.name]]</div>
+            <div class="sub-content">
+              <template is="dom-repeat" items="{{project.techstack}}" as="tech">
+                <span class="keywords">[[tech]]</span>
+              </template>
+            </div>
+            <br>
+            <div class="sub-content"><a href="[[project.link]]"><b>[[project.short]]</b></a></span>[[project.details]]</span></div>
+            <br>
+          </template>
         </div>
       </div>
     </template>

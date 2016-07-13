@@ -1,0 +1,23 @@
+{
+  "website": "https://github.com/ycewe/",
+  "projects": [
+    {
+      "name": "CP Book Companion Website",
+      "link": "http://cpbook.net/",
+      "short": "CPBook",
+      "techstack": [
+        "HTML5", "CSS3", "PHP", "MySQL", "Bootstrap3"
+      ],
+      "details": " (short for Competitive Programming Book) is a book on advanced algorithms written by Dr. Steven Halim. This is therefore a webpage created for him and his publications. Not only it is a page to market the book, but also it automates bug reports and reviews from users."
+    },
+    {
+      "name": "Catalyst",
+      "link": "https://github.com/cs2103jan2016-w14-1j/main",
+      "short": "Catalyst",
+      "techstack": [
+        "Java", "JavaFX"
+      ],
+      "details": ", was built under the academic module CS2103, is a simple to-do list. However, unlike other to-do lists found online, it is a Java software with a persistent storage and features beyond the typical CRUD functions. It is also both keyboard-oriented and user-friendly. Information on its features can be found in its repository."
+    }
+  ]
+}

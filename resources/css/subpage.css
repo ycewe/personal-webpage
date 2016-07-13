@@ -13,6 +13,11 @@
   src: url(/resources/fonts/Alcubierre.otf);
 }
 
+a {
+  text-decoration: none;
+  color: teal;
+}
+
 .content div {
   margin-bottom: 5px;
 }
@@ -52,6 +57,15 @@
   color: rgb(125, 125, 125);
 }
 
+.keywords {
+  font-family: reef;
+  font-size: 18px;
+  background-color: darkgreen;
+  color: white;
+  padding: 3px;
+  border-radius: 8px;
+}
+
 .slide-up-fade-in {
 	animation-name: slideUpFadeIn;
 	-webkit-animation-name: slideUpFadeIn;
@@ -62,11 +76,11 @@
 }
 
 @keyframes slideUpFadeIn {
-	0% { transform: translateY(1%); opacity: 0; }
+	0% { transform: translateY(0.5%); opacity: 0; }
 	100% { transform: translateY(0%); opacity: 1; }
 }
 
 @-webkit-keyframes slideUpFadeIn {
-	0% { -webkit-transform: translateY(1%); opacity: 0; }
+	0% { -webkit-transform: translateY(0.5%); opacity: 0; }
 	100% { -webkit-transform: translateY(0%); opacity: 1; }
 }
