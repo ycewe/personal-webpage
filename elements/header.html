@@ -55,16 +55,16 @@
         }
       </style>
       <iron-location path="{{path}}" hash="{{hash}}" query="{{query}}" url-space-regex="//"></iron-location>
-      <paper-header-panel mode="seamed" class="slide-down-fade-in">
+      <paper-header-panel mode="seamed">
         <paper-toolbar>
             <paper-tabs noink selected="{{getSelected(hash)}}">
-              <paper-tab link path="/">
+              <paper-tab link path="/" class="slide-down-fade-in">
                 <a href="#/" class="link"><iron-icon icon="home"></iron-icon>Home</a>
               </paper-tab>
-              <paper-tab link path="/resume">
+              <paper-tab link path="/resume" class="slide-down-fade-in">
                 <a href="#/resume" class="link"><iron-icon icon="stars"></iron-icon>Resume</a>
               </paper-tab>
-              <paper-tab link path="/portfolio">
+              <paper-tab link path="/portfolio" class="slide-down-fade-in">
                 <a href="#/portfolio" class="link"><iron-icon icon="work"></iron-icon>Portfolio</a>
               </paper-tab>
             </paper-tabs>

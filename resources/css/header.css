@@ -1,8 +1,8 @@
 .slide-down-fade-in {
 	animation-name: slideDownFadeIn;
 	-webkit-animation-name: slideDownFadeIn;
-	animation-duration: 0.5s;
-	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.7s;
+	-webkit-animation-duration: 0.7s;
 	animation-timing-function: ease;
 	-webkit-animation-timing-function: ease;
 }
