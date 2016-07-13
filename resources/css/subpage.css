@@ -15,7 +15,7 @@
 
 a {
   text-decoration: none;
-  color: teal;
+  color: coral;
 }
 
 .content div {
@@ -33,13 +33,14 @@ a {
   margin: 0 0 30px 0;
   font-family: delicious-heavy;
   font-size: 48px;
+  color: coral;
 }
 
 .sub-title {
   margin: 20px 0 10px 0;
   font-family: reef;
   font-size: 30px;
-  color: green;
+  color: lightsalmon;
 }
 
 .sub-content {
@@ -61,7 +62,7 @@ a {
   display: inline-block;
   font-family: reef;
   font-size: 18px;
-  background-color: darkgreen;
+  background-color: salmon;
   color: white;
   padding: 0 10px 0 10px;
   border-radius: 20px;
