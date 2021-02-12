@@ -1,0 +1,64 @@
+.social-icon-group {
+  display: flex;
+}
+
+.social-link {
+  display: block;
+}
+
+.social-link--github {
+  color: #fff;
+}
+
+.social-link--linkedin {
+  color: #2d76b0;
+}
+
+.social-svg {
+  width: 5rem;
+  height: 5rem;
+}
+
+.social-group__outline {
+  opacity: 1;
+  transition: opacity 0.2s;
+  will-change: opacity;
+}
+
+.social-link:hover .social-group__outline {
+  opacity: 0;
+}
+
+.social-link .social-group__inner-circle {
+  fill: transparent;
+}
+
+.social-link--github .social-group__icon {
+  transform-origin: 50% 50%;
+  fill: #fff;
+  transition: transform 0.2s;
+  will-change: transform;
+}
+
+.social-link--github:hover .social-group__icon {
+  transform: scale(1.2);
+}
+
+.social-link--linkedin .social-group__inner-circle {
+  transform-origin: 50% 50%;
+  transition: transform 0.2s, fill 0.2s;
+}
+
+.social-link--linkedin:hover .social-group__inner-circle {
+  transform: scale(0.9);
+  fill: currentColor;
+}
+
+.social-link--linkedin .social-group__icon {
+  fill: #fff;
+  transition: fill 0.2s;
+}
+
+.social-link--linkedin:hover .social-group__icon {
+  fill: #000;
+}
