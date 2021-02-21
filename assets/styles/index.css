@@ -15,7 +15,7 @@
 
 .top-bg {
   width: 100%;
-  height: 68%;
+  height: 72%;
   background-color: #191970;
   position: fixed;
   top: 0;
@@ -24,7 +24,7 @@
 
 .bottom-bg {
   width: 100%;
-  height: 32%;
+  height: 28%;
   background-color: #f5fffa;
   position: fixed;
   bottom: 0;
