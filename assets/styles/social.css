@@ -7,7 +7,7 @@
 }
 
 .social-link--github {
-  color: #fff;
+  color: #000000;
 }
 
 .social-link--linkedin {
@@ -35,7 +35,7 @@
 
 .social-link--github .social-group__icon {
   transform-origin: 50% 50%;
-  fill: #fff;
+  fill: #000000;
   transition: transform 0.2s;
   will-change: transform;
 }
@@ -55,10 +55,10 @@
 }
 
 .social-link--linkedin .social-group__icon {
-  fill: #fff;
+  fill: #000000;
   transition: fill 0.2s;
 }
 
 .social-link--linkedin:hover .social-group__icon {
-  fill: #000;
+  fill: #FFFFFF;
 }

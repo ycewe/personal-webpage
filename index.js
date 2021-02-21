@@ -1,160 +1,197 @@
-const canvas = document.getElementById("canvas");
+const isAnimationPreferred = window.matchMedia('(prefers-reduced-motion: no-preference)').matches;
 
-var
-    width = canvas.width = window.innerWidth,
-    height = canvas.height = window.innerHeight;
+let isAngry = false;
+let isComputerOff = false;
 
-const
-    ctx = canvas.getContext("2d"),
+(function runAnimations() {
+  if (!isAnimationPreferred) {
+    return;
+  }
 
-    minDist = 10,
-    maxDist = 30,
-    initialWidth = 10,
-    maxLines = 7,
-    initialLines = 4,
-    speed = 7,
-    
-    directions = [
-        // straight velocity
-        [0, 1],
-        [1, 0],
-        [0, -1],
-        [-1, 0],
-        // diagonal velocity
-        [.7, .7],
-        [.7, -.7],
-        [-.7, .7],  
-        [-.7, -.7]
-    ],
-    
-    startConfig = {
-        x: width / 2,
-        y: height / 2,
-        vx: 0,
-        vy: 0,
-        width: initialWidth
-    };
+  /**
+   * animation for screen
+   */
 
-let
-    lines = [],
-    frame = 0,
-    timeSinceLast = 0;
+  gsap.to(".terminal__key-prompt", {
+    duration: 0.2,
+    repeat: -1,
+    yoyo: true,
+    opacity: 0,
+    repeatDelay: 0.5
+  });
 
-function Line(config = {}) {
-    this.x = config.x | 0;
-    this.y = config.y | 0;
-    this.width = config.width / 1.25;
-    this.isDead = false;
+  const screenChatTimeline = gsap.timeline({
+    onComplete: () => {
+      const chatScrollTimeline = gsap.timeline({
+        delay: 10,
+        repeat: -1,
+        repeatDelay: 8,
+        yoyo: true
+      });
 
-    do {
-        const direction = directions[(Math.random() * directions.length) | 0];
-        
-        this.vx = direction[0];
-        this.vy = direction[1];
-    } while (
-        (this.vx === -config.vx && this.vy === -config.vy)
-        || (this.vx == config.vx && this.vy === config.vy)
+      chatScrollTimeline.to(".chat__content", {
+        y: 0,
+        duration: 3
+      });
+    }
+  });
+
+  screenChatTimeline
+    .from(".screen__chat", {
+      x: 100,
+      y: 120,
+      scaleY: 0,
+      scaleX: 0,
+      duration: 1,
+      delay: 2
+    })
+    .from(".chat__sidebar__paragraph", {
+      opacity: 0
+    })
+    .from(".chat__content__paragraph-1", {
+      scaleX: 0,
+      opacity: 0
+    })
+    .to(".chat__content", {
+      y: -100,
+      duration: 3,
+      delay: 1,
+      ease: Power3.easeOut
+    })
+    .from(
+      ".chat__content__paragraph-2",
+      {
+        scaleX: 0,
+        opacity: 0
+      },
+      "-=1.5"
+    );
+
+
+  /**
+   * animation for cat
+   */
+  gsap.to(".cat__tail-far", {
+    duration: 2,
+    attr: {
+      d: "M297.28 257.185C297.28 257.185 295.703 257.079 313.203 260.579C330.703 264.079 312.5 265.5 300 277"
+    },
+    ease: Back.easeIn,
+    repeat: -1,
+    yoyo: true,
+    delay: 0.5
+  });
+
+  const blink = gsap.timeline({ repeat: -1, repeatDelay: 4 });
+
+  blink
+    .set(".cat__eye-left, .cat__eye-right", {
+      transformOrigin: "bottom"
+    })
+    .to(".cat__eye-left, .cat__eye-right", {
+      scaleX: 1.2,
+      scaleY: 0.1,
+      duration: 0.1
+    })
+    .to(".cat__eye-left, .cat__eye-right", {
+      scaleX: 1,
+      scaleY: 1,
+      duration: 0.1
+    })
+
+
+  /**
+   * animation for computer click
+   */
+  const screenOffTimeline = gsap.timeline({
+    onComplete: () => {
+      screenChatTimeline.play();
+      isComputerOff = false;
+    }
+  });
+
+  const catAngryTimeline = gsap.timeline({ paused: true });
+
+  const catPawToOnTimeline = gsap.timeline({
+    paused: true,
+    onComplete: () => {
+      screenOffTimeline
+        .to(".button__icon", {
+          stroke: "white"
+        })
+        .to(
+          ".screen",
+          {
+            scaleY: 1,
+            scaleX: 1
+          },
+          "<"
+        )
+
+      catAngryTimeline.reverse();
+    }
+  });
+
+  catAngryTimeline
+    .to(
+        ".cat__eye-left-happy, .cat__eye-right-happy",
+        {
+          visibility: "hidden",
+          duration: 0.5,
+        },
+      )
+    .to(
+      ".cat__eye-left-angry, .cat__eye-right-angry",
+      {
+        visibility: "visible",
+        duration: 0.5
+      },
+      "<"
+    );
+
+  catPawToOnTimeline
+    .set(".screen", { transformOrigin: "center" })
+    .to(".cat__paw-back", {
+      delay: 1.5,
+      x: -30,
+      y: -18
+    })
+    .to(
+      ".cat__paw-back",
+      {
+        x: 0,
+        y: 0
+      },
+      ">"
     )
+    .add(() => {
+      catAngryTimeline.play();
+    }, "-=1.5");
 
-    this.vx *= speed;
-    this.vy *= speed;
-    this.dist = Math.random() * (maxDist - minDist) + minDist;
-}
-
-Line.prototype.step = function() {
-    let
-        prevX = this.x,
-        prevY = this.y;
-    
-    this.x += this.vx;
-    this.y += this.vy;
-
-    --this.dist;
-
-    // cancel if exits screen
-    const hasExitScreen = this.x < 0 || this.x > width || this.y < 0 || this.y > height
-    this.isDead = hasExitScreen;
-
-    // propagate
-    if (this.dist <= 0 && this.width > 1) {
-        this.dist = Math.random() * (maxDist - minDist) + minDist;
-
-        if (lines.length < maxLines) {
-            lines.push(new Line(this));
-        
-            if (Math.random() < .5) {
-                lines.push(new Line(this));
-            }
-        }
-
-        this.isDead = Math.random() < .2;
+  document.querySelector(".computer__button").addEventListener("click", () => {
+    if (isComputerOff) {
+      return;
     }
 
-    ctx.strokeStyle = ctx.shadowColor = getColor(this.x);
-    ctx.lineWidth = this.width;
-    ctx.beginPath();
-    ctx.moveTo(this.x, this.y);
-    ctx.lineTo(prevX, prevY);
-    ctx.stroke();
-}
+    isComputerOff = true;
 
-function getColor(x) {
-    return "hsl(hue, 80%, 50%)".replace("hue", x / width * 360 + frame);
-}
+    screenChatTimeline.pause();
+    catPawToOnTimeline.restart();
 
-function animate() {
-    window.requestAnimationFrame(animate);
+    screenOffTimeline
+      .to(".screen", {
+        duration: 0.15,
+        scaleY: 0,
+        scaleX: 1.05
+      })
+      .to(
+        ".button__icon",
+        {
+          duration: 0.1,
+          stroke: "#444444"
+        },
+        "<"
+    )
+  });
+})()
 
-    ++frame;
-
-    ctx.shadowBlur = 0;
-    ctx.fillStyle = "rgba(0, 0, 0, .02)";
-    ctx.fillRect(0, 0, width, height);
-    ctx.shadowBlur = .5;
-
-    for (let i = 0; i < lines.length; ++i) {
-        const line = lines[i];
-
-        line.step();
-
-        if (line.isDead) { // if canceled
-            lines.splice(i, 1);
-            --i;
-        }
-    }
-
-    // spawn new lines
-    ++timeSinceLast;
-
-    if (lines.length < maxLines && timeSinceLast > 10 && Math.random() < .5) {
-        timeSinceLast = 0;
-
-        lines.push(new Line(startConfig));
-
-        ctx.fillStyle = ctx.shadowColor = getColor(startConfig.x);
-        ctx.beginPath();
-        ctx.arc(startConfig.x, startConfig.y, initialWidth, 0, Math.PI * 2);
-        ctx.fill();
-    }
-}
-
-function init() {
-    lines = [];
-    lines = Array(initialLines).fill(new Line(startConfig))
-
-    ctx.fillStyle = "#222";
-    ctx.fillRect(0, 0, width, height);
-}
-
-init();
-animate();
-
-window.addEventListener("resize", function () {
-    width = canvas.width = window.innerWidth,
-    height = canvas.height = window.innerHeight;
-
-    startConfig.x = width / 2;
-    startConfig.y = height / 2;
-  
-    init();
-});

@@ -1,0 +1,12 @@
+.cat-and-computer {
+  height: 40rem;
+}
+
+.cat__tail-near {
+  visibility: hidden;
+}
+
+.cat__eye-right-angry,
+.cat__eye-left-angry {
+  visibility: hidden;
+}
