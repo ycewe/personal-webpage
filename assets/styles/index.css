@@ -13,20 +13,25 @@
   color: #000000;
 }
 
-.top-bg {
-  width: 100%;
-  height: 72%;
-  background-color: #191970;
+.bg {
+  display: flex;
   position: fixed;
   top: 0;
+  width: 100%;
+  height: 100%;
   z-index: -1;
 }
 
-.bottom-bg {
-  width: 100%;
-  height: 28%;
-  background-color: #f5fffa;
-  position: fixed;
-  bottom: 0;
-  z-index: -1;
+.bg--top {
+  width: 35%;
+  height: 100%;
+  background-color: #0b3325;
+  left: 0;
+}
+
+.bg--bottom {
+  width: 75%;
+  height: 100%;
+  background-color: #f0ffff;
+  right: 0;
 }

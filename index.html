@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="assets/styles/index.css" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
 
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&display=swap&effect=outline" rel="stylesheet" />
     </head>
     <body>
         <main class="content">
@@ -128,9 +128,11 @@
                         fill="black" />
                 </g>
             </svg>
+
             <article class="user-info">
-                <h3 class="user-info--quote">Software Engineer - I break it till I make it</h3>
+                <span class="user-info--quote">Engineer &#183; Design &#183; Animate</span>     
             </article>
+
             <section class="social-icon-group">
                 <a class="social-link social-link--github" href="https://github.com/ycewe">
                     <svg class="social-svg" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -192,8 +194,10 @@
                     </svg>
                 </a>
             </section>
-            <div class="top-bg"></div>
-            <div class="bottom-bg"></div>
+            <div class="bg">
+                <div class="bg--top"></div>
+                <div class="bg--bottom"></div>
+            </div>
         </main>
         <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
         <script src="index.js"></script>

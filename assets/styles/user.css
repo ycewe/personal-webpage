@@ -1,9 +1,35 @@
 .user-info {
+  font-size: 1.5rem;
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
+.user-info--quote {
+  color: #0b3325;
+  font-weight: 400;
+  word-spacing: 0.5rem;
+}
+
 .user-name {
-  color: white;
+  background: rgb(0, 196, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 196, 255, 1) 0%,
+    rgba(9, 121, 109, 1) 50%,
+    rgba(0, 36, 30, 1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: #f0ffff;
+  font-size: 6rem;
+  letter-spacing: 0.8rem;
+  text-transform: uppercase;
+  -webkit-text-fill-color: #f0ffff;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke: 10px transparent;
+
+  margin-bottom: 2rem;
 }
